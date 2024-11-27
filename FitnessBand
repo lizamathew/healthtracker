@@ -1,0 +1,24 @@
+Feature: Use Fitness Band
+  As a user
+  I want to use a Fitness Band
+
+    @storykey=FIT-2
+    @testcasekey=FIT-TC-301
+    Scenario: Set device on Run mode 
+    Given I run for 30 minutes
+    When I check the device 
+    Then I burn 100 calories
+	
+    @storykey=FIT-2
+    @testcasekey=FIT-TC-302
+    Scenario: Set device on Walk mode
+ 	  Given I walk for 1 hour
+	  When I check the device 
+	  Then I burn 200 calories
+	
+    @storykey=FIT-2
+    @testcasekey=FIT-TC-303
+	  Scenario Outline: Do Exercise 
+ 	  Given I have exercise equipments 
+	  When I workout
+	  Then I get better health
